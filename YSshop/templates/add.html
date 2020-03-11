@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'image/gallery-favicon.png' %}" type="image/x-icon">
+	<title>添加画品</title>
+	<link href="{% static 'style/common.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'style/add.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+			<div class="logo f1">
+			    <a href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}"></a>
+			</div>
+			<div class="auth fr">
+				<ul>
+					<li><a href="{% url 'login' %}">登录</a></li>
+					<li><a href="{% url 'register' %}">注册</a></li>
+				</ul>
+			</div>
+	</div>
+        <div class="content">
+		<div class="addwrap">
+			<div class="addl fl">
+				<header>添加画品</header>
+				<form action="/" method="POST">
+					<div class="additem">
+						<label>画品名称</label><input type="text" placeholder="请输入商品名称">
+					</div>
+					<div class="additem">
+						<label>价值</label><input type="text">
+					</div>
+					<div class="additem">
+						<label>缩略图</label><input type="file">
+					</div>
+					<div class="additem textwrap">
+						<label class="ptop">画品简介</label><textarea></textarea>
+					</div>
+					<div class="additem textwrap">
+						<label class="ptop">画品详情</label><textarea></textarea>
+					</div>
+					<button type="submit">发布</button>
+				</form>
+			</div>
+			<div class="addr fr">
+				<img src="{% static 'image/index_banner.png' %}">
+			</div>
+		</div>
+		
+	</div>
+        <div class="footer">
+            <p><span>M-GALLARY</span>©2017 POWERED BY IMOOC.INC</p>
+        </div>
+
+</body>
+</html>

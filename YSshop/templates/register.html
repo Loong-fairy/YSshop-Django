@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'image/gallery-favicon.png' %}" type="image/x-icon">
+	<title>用户注册</title>
+	<link href="{% static 'style/common.css' %}" type="text/css" rel="stylesheet">
+  <link href="{% static 'style/add.css' %}" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style/login.css' %}">
+</head>
+<body>
+  <div class="header">
+   <div class="logo f1">
+    <a href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}"></a>
+  </div>
+  <div class="auth fr">
+    <ul>
+     <li><a href="{% url 'login' %}">登录</a></li>
+     <li><a href="{% url 'register' %}">注册</a></li>
+   </ul>
+ </div>
+</div>
+<div class="content">
+  <div class="center">
+    <div class="center-login">
+      <div class="login-banner">
+       <a href="#"><img src="{% static 'image/login_banner.png' %}" alt=""></a>
+     </div>
+     <div class="user-login">
+       <div class="user-box">
+         <div class="user-title">
+           <p>用户注册</p>
+         </div>
+         <form class="login-table">
+          <div class="login-left">
+            <label class="username">用户名</label>
+            <input type="text" class="yhmiput" name="user">
+          </div>
+          <div class="login-right">
+            <label class="passwd">密码</label>
+            <input type="paddword" class="yhmiput" name="pwd">
+          </div>
+          <div class="login-left">
+            <label class="passwds">确认密码</label>
+            <input type="paddword" class="yhmiput" name="pwd">
+          </div>
+         <div class="login-btn"><button type="submit">注册</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="footer">
+ <p><span>M-GALLARY</span> ©2017 POWERED BY IMOOC.INC</p>
+</div>
+
+</body>
+</html>

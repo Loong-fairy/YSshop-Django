@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'image/gallery-favicon.png' %}" type="image/x-icon">
+    <title>验证码成功</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/common.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style/done.css' %}" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo f1">
+            <a href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}"></a>
+        </div>
+        <div class="auth fr">
+            <ul>
+                <li><a href="{% url 'login' %}">登录</a></li>
+                <li><a href="{% url 'register' %}">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="center">
+            <div class="image_center">
+                <span class="smile_face">:)</span>           
+            </div>
+            <div class="code">
+                验证码成功
+            </div>
+            <div class="jump">
+                页面自动&nbsp<b>跳转</b>&nbsp,等待时间 2 秒
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p><span>M-GALLARY</span>©2017 POWERED BY IMOOC.INC</p>
+    </div>
+</body>
+</html>
